@@ -1,0 +1,63 @@
+---
+const stats = [
+  {
+    name: 'Czas wykonywania',
+    value: 'Około 30 min',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+      <img
+        class="mx-auto h-auto w-full max-w-xl rounded-3xl"
+        width="576"
+        height="864"
+        src="/assets/konchowanie-uszu-md.jpeg"
+        alt="Our experts working together"
+      />
+      <div class="flex flex-col gap-10">
+        <!-- Mission description -->
+        <div class="space-y-8 sm:space-y-12">
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Konchowanie uszu:</h2>
+          <div class="space-y-6">
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              Konchowanie uszu, znane również jako świecowanie uszu, to starożytna metoda
+              oczyszczania i relaksacji, która wykorzystuje specjalne świece konchowe. Świece te
+              wykonane są z wosku pszczelego, propolisu i ziół, które podczas spalania generują
+              delikatny podciśnienie i ciepło.
+            </p>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              Podczas sesji konchowania uszu, terapeuta umieszcza końcówkę świece w uchu pacjenta i
+              podpala ją. Powstałe ciepło i delikatne podciśnienie pomagają w usuwaniu nadmiaru
+              wosku i zanieczyszczeń z kanału słuchowego. Proces ten działa również relaksująco i
+              łagodząco na ucho i okolicę głowy. Konchowanie uszu jest szczególnie polecane osobom z
+              problemami z zatokami, nadmiarem wosku w uszach, migrenami, problemami ze snem i
+              uczuciem zatkania uszu.
+            </p>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+              Pamiętaj, że powyższe opisy mają charakter ogólny, a dokładne informacje na temat
+              każdego zabiegu i jego efektów warto uzyskać bezpośrednio od wykwalifikowanego
+              terapeuty lub specjalisty.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {
+            stats.map((stat) => (
+              <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
+                <dt class="text-base">{stat.name}</dt>
+                <dd class="text-lg tracking-tight  text-coffee">
+                  <strong class="text-coffee">{stat.value}</strong>
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

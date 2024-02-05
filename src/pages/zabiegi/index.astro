@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/zabiegi/Heading.astro';
+import Moksa from '../../components/zabiegi/Moksa.astro';
+import MoksaSmoka from '../../components/zabiegi/MoksaSmoka.astro';
+import AccessBars from '../../components/zabiegi/AccessBars.astro';
+import LampaTDP from '../../components/zabiegi/LampaTDP.astro';
+import Konchowanie from '../../components/zabiegi/Konchowanie.astro';
+import MasazBankaChinska from '../../components/zabiegi/MasazBankaChinska.astro';
+---
+
+<Layout
+  description="Find the pricing plan that best fits your needs. Plans include seats, projects, support and more"
+  title="Pricing · Stone"
+>
+  <Heading />
+  <section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <Moksa />
+      <MoksaSmoka />
+      <AccessBars />
+      <LampaTDP />
+      <Konchowanie />
+      <MasazBankaChinska />
+    </div>
+  </section>
+</Layout>

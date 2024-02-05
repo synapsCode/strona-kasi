@@ -1,35 +1,84 @@
 ---
 const pricing = [
   {
-    name: 'Basic',
-    description: 'For development, staging, and small production projects.',
-    periodicity: '/month',
-    price: '$10',
-    action: 'Buy Now',
-    features: ['5 Seats', '1,000 Projects', 'Lifetime access', 'Community Support'],
+    name: 'Bańki ogniowe',
+    description: 'Bańki ogniowe stosuje się głównie przy:',
+    // periodicity: '/month',
+    price: '60zł',
+    // action: 'Buy Now',
+    features: [
+      'Chorobach układu oddechowego',
+      'Bólach mięśni i  stawów',
+      'Lifetime access',
+      'Osłabieniu odporności',
+      'Stres',
+    ],
   },
   {
-    name: 'Pro',
-    description: 'For high-scale and mission critical projects.',
+    name: 'Access bars',
+    description: 'Access bars stosujemy dla .',
     isFlagged: true,
-    periodicity: '/month',
-    price: '$25',
-    action: 'Buy Now',
-    features: ['10 Seats', '10,000 Projects', 'Lifetime access', 'Email Support', 'Free updates'],
-  },
-  {
-    name: 'Team',
-    description: 'For teams with more security, support, and performance needs.',
-    periodicity: '',
-    price: 'Custom',
+    periodicity: '100zł dzieci i młodzież',
+    price: '200zł',
     action: 'Buy Now',
     features: [
-      'Unlimited Seats',
-      'Unlimited Projects',
-      'Lifetime access',
-      'Email and Chat Support',
-      'High-Performance',
-      'Free updates',
+      'Poprawa samopoczucia i jakości życia',
+      'Uwolnienie od negatywnych przekonań i ograniczeń',
+      'Zwiększenie kreatywności i intuicji',
+      'Otwarcie się na przyjmowanie obfitości i radości',
+      'Lepsza komunikacja i relacje z innymi',
+    ],
+  },
+  {
+    name: 'Lampa TDP',
+    description: 'TDP może pomóc w łagodzeniu bólu:',
+    periodicity: '',
+    price: '40 zł',
+    action: 'Buy Now',
+    features: [
+      'Poprawa krążenia',
+      'Stymulacja metabolizmu',
+      'Regeneracja tkanek',
+      'Zwiększanie odporności',
+    ],
+  },
+  {
+    name: 'Konchowanie uszu',
+    description: 'TDP może pomóc w łagodzeniu bólu:',
+    periodicity: '',
+    price: '80 zł',
+    action: 'Buy Now',
+    features: [
+      'Poprawa krążenia',
+      'Stymulacja metabolizmu',
+      'Regeneracja tkanek',
+      'Zwiększanie odporności',
+    ],
+  },
+  {
+    name: 'Masaż bańką chińską',
+    description: 'TDP może pomóc w łagodzeniu bólu:',
+    periodicity: '',
+    price: '70 zł',
+    action: 'Buy Now',
+    features: [
+      'Poprawa krążenia',
+      'Stymulacja metabolizmu',
+      'Regeneracja tkanek',
+      'Zwiększanie odporności',
+    ],
+  },
+  {
+    name: 'Moksa Smoka',
+    description: 'TDP może pomóc w łagodzeniu bólu:',
+    periodicity: '',
+    price: '150 zł',
+    action: 'Buy Now',
+    features: [
+      'Poprawa krążenia',
+      'Stymulacja metabolizmu',
+      'Regeneracja tkanek',
+      'Zwiększanie odporności',
     ],
   },
 ];
@@ -42,14 +91,15 @@ const pricing = [
         pricing.map((item) => (
           <div
             class:list={[
-              'relative flex flex-col gap-8 rounded-3xl p-8',
+              'border-primary-900/10 dark:border-primary-300/10 relative flex flex-col gap-8 rounded-3xl rounded-3xl border p-6 p-8',
               item.isFlagged && 'bg-primary-500/10 dark:bg-primary-400/10',
             ]}
           >
             <div class="flex-1">
               <h2 class="text-xl font-medium">{item.name}</h2>
-              <p class="mt-4 flex items-baseline">
+              <p class="mt-4">
                 <span class="text-4xl font-medium tracking-tight">{item.price}</span>
+                <br />
                 <span class="text-primary-950/70 dark:text-primary-200/70 ml-1 text-sm font-medium">
                   {item.periodicity}
                 </span>

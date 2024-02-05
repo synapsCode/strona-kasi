@@ -1,0 +1,63 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Zdrowy kręgosłów',
+    description:
+      'Odkryj techniki jogi i terapii baski, które wspierają zdrowie kręgosłupa. Nasze zabiegi pomogą Ci wzmocnić i zrelaksować mięśnie, przywracając równowagę ciała.',
+  },
+  {
+    step: '02',
+    name: 'Stres/Depresja',
+    description:
+      'Pozbądź się stresu i depresji w Twoim Miejscu Mocy. Metody Access Bars oraz jogi pomogą Ci odnaleźć spokój i równowagę w życiu codziennym.',
+  },
+  {
+    step: '03',
+    name: 'Zdrowe Zatoki',
+    description:
+      'Odetchnij z ulgą! Nasze zabiegi pomogą Ci oczyścić zatoki, poprawić przepływ energii i poczuć się odświeżonym każdego dnia.',
+  },
+  {
+    step: '04',
+    name: 'Zdrowe Zatoki',
+    description:
+      'Odetchnij z ulgą! Nasze zabiegi pomogą Ci oczyścić zatoki, poprawić przepływ energii i poczuć się odświeżonym każdego dnia.',
+  },
+  {
+    step: '05',
+    name: 'Anty Katar',
+    description:
+      'Walcz z katarzem bez efektów ubocznych. Nasze naturalne metody pomagają złagodzić objawy kataru i poprawić oddychanie.',
+  },
+  {
+    step: '06',
+    name: 'Bezsenność',
+    description:
+      'Odnajdź spokojny sen dzięki naszym terapiom. Zabiegi baski i sesje jogi zapewnią Ci głęboki relaks i wsparcie w walce z bezsennością.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Pakiety</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

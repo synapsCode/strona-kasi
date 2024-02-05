@@ -10,7 +10,12 @@ module.exports = {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: colors.stone,
+      tan: '#CFB082ff',
+      'black-bean': '#381505ff',
+      'brunswick-green': '#244A41ff',
+      'brunswick-green-700': '#418977',
+      lion: '#CAA679ff',
+      coffee: '#674F34ff',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
