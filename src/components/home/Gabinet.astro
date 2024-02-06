@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import olejkiMedium from '../../assets/images/olejki-medium.jpg';
+import swieceMedium from '../../assets/images/swiece-medium.jpg';
+import konchowanieSwiece from '../../assets/images/konchowanie-swiece.jpg';
+import Button from '../elemets/Button.astro';
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
+    <div
+      class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col items-center gap-8 rounded-3xl px-5 py-16 sm:gap-10"
+    >
+      <div class="flex flex-col gap-4 sm:gap-6">
+        <h2 class="mx-auto max-w-sm text-3xl font-medium tracking-tight sm:text-4xl">Gabinet</h2>
+        <p class="text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-2xl text-lg">
+          Wszystkie materiały urzywane w gabinecie są z najwyższej jakości surowców. Są to produkty
+          ekologiczne od Polskich producentów.
+        </p>
+      </div>
+      <div class="grid gap-12 sm:grid-cols-3 lg:gap-8">
+        <Image
+          src={olejkiMedium}
+          width={300}
+          height={400}
+          decoding="async"
+          loading="lazy"
+          alt="Olejki zabiegowe"
+          class="h-auto w-full rounded-3xl"
+        />
+        <Image
+          src={swieceMedium}
+          width={300}
+          height={400}
+          decoding="async"
+          loading="lazy"
+          alt="Świece zabiegowe"
+          class="h-auto w-full rounded-3xl"
+        />
+        <Image
+          src={konchowanieSwiece}
+          width={300}
+          height={400}
+          decoding="async"
+          loading="lazy"
+          alt="Świece do konchowania uszu"
+          class="h-auto w-full rounded-3xl"
+        />
+      </div>
+      <Button src="/kontant" title="Proszę o kontakt" />
+    </div>
+  </div>
+</section>

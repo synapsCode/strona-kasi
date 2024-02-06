@@ -1,52 +1,52 @@
 ---
 const features = [
   {
-    id: 'zabieg-1',
+    id: 'banki',
     name: 'Bańki',
     prefix: 'około 30 min',
     description: 'Odkryj tradycyjną technikę bańkowania.',
   },
   {
-    id: 'zabieg-2',
+    id: 'konchowanieUszu',
     name: 'Konchowanie uszu',
     prefix: 'około 30 min',
     description: 'Ciesz się relaksem i lepszym samopoczuciem.',
   },
   {
-    id: 'zabieg-3',
+    id: 'accessBars',
     name: 'Access Bars',
     prefix: 'około 30 min',
     description:
       'To zabieg energetyczny, który ma na celu uwolnić umysł od ograniczających przekonań ',
   },
   {
-    id: 'zabieg-4',
+    id: 'masazbankahhinska',
     name: 'Masaż bańka Chińska',
     prefix: 'około 30 min',
     description: 'Zrelaksuj ciało i umysł poprzez terapię masażu bańką chińską.',
   },
   {
-    id: 'zabieg-5',
+    id: 'lampaTDP',
     name: 'Lampa DTP',
     prefix: 'około 30 min',
     description: 'Leczenie za pomocą ciepła.',
   },
   {
-    id: 'zabieg-6',
+    id: 'moksa',
     name: 'Moksa',
     prefix: 'około 30 min',
     description:
       'Przynieś ulgę swojemu ciału z pomocą terapii moksy, która łagodzi bóle mięśniowe i poprawia krążenie krwi.',
   },
   {
-    id: 'zabieg-7',
+    id: 'moksasmoka',
     name: 'Moksa smoka',
     prefix: 'około 30 min',
     description:
       'Wzmacnianie energii Yang w organizmie, poprawę krążenia, odporności i regeneracji.',
   },
   {
-    id: 'zabieg-7',
+    id: 'bodyprocess',
     name: 'Body Process',
     prefix: 'około 30 min',
     description:
@@ -84,11 +84,11 @@ const features = [
                     aria-expanded="false"
                     x-bind:aria-expanded="isOpen.toString()"
                   >
-                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
+                    <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
                       <span class="font-medium">{feature.name}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
-                          class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
+                          class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
                           x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -102,9 +102,23 @@ const features = [
                   </button>
                 </dt>
                 <dd class="pb-6 pr-6" id={feature.id} x-show="isOpen" x-cloak x-collapse>
-                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">
+                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
                     {feature.description}
                   </p>
+                  <div class="mt-4 flex items-center gap-2">
+                    <span class="text-lg ">
+                      <a href=`/zabiegi#${feature.id}`>Więcej</a>
+                    </span>
+                    <svg
+                      class="text-primary-600 dark:text-primary-400 h-3 w-6 sm:h-6 sm:w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                    </svg>
+                  </div>
                 </dd>
               </div>
             ))
